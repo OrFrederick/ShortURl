@@ -1,0 +1,84 @@
+/*Farben: #61892F #86C232 #222629 #474B4F #6B6E70*/
+
+h1{
+    color: #86C232;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.url-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    height: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25vh;
+    
+}
+
+
+input[type="text"] {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 80%;
+    height: 10vh;
+    border:none;
+    font-size: 2rem;
+    padding-left: 5%;
+}
+
+input[type="submit"] {  
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    right: 0;
+    height: 10vh+1px;
+    width: 20%;
+    background-color: #474B4F;
+    color: #86C232;
+    font-size: 2rem;
+    border: none;
+}
+
+input[type="text"]:focus, input[type="submit"]:focus{
+    outline:none
+}
+
+input[type="submit"]:hover{
+    background-color: #61892F;
+    color: white;
+}
+
+::-webkit-input-placeholder{
+    font-size: 2rem;
+    /*padding-left: 5%;
+    */
+}
+
+a{
+    color: #6B6E70;
+}
+.red-url{
+    color: #86C232;
+}
+.show-link-box{
+    display: flex;
+    width: 70%;
+    margin-top: 10vh;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+i{
+    margin-top: -1%;
+    padding: 15px;
+    border-radius: 50px;
+    border: solid 4px #474B4F;
+}

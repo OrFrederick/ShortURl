@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock links %}
+    
+{% block content %}
+    <h1>Kürze deine URIs</h1>
+
+    <form action="" method="post">
+        <div class="url-form">
+            {% csrf_token %}
+            <input type="text" name="url" placeholder="Gib hier deine URI ein...">
+            <input type="submit" value="Kürzen!">
+        </div>
+    </form>
+    
+    {% if code %}
+    <div class="show-link-box">
+        <a class="link old-url" href="{{ old_url }}">{{ old_url }}</a>
+        <a class="link red-url" href="/r/{{code}}" id="copy">http://localhost:8000/r/{{ code }}</a>
+        <i class="fa fa-copy" onclick="copyToClipboard('#copy')" style="font-size:60px;color:#6B6E70;"></i>
+    </div>
+        
+        <script>
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+                }
+        </script>
+    {% endif %}
+{% endblock content %}
