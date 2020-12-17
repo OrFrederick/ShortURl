@@ -1,7 +1,7 @@
 # ShortURl
 This is my URL shortener.
 It uses a django backend and a react frontend.
-##How it works
+## How it works
 The principle is very simple, you type the URI you want to shorten
 and press the button. Now a random code gets generated, inserted into
 a sqlite database and referenced to the "old" URI. Now when you go to
